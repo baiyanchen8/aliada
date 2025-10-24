@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.25in}
+\setlength{\topmargin}{-0.4in}
+\setlength{\textheight}{8.5in}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1.5ex}
+
+\usepackage{amssymb, amsmath, amsfonts}
+\usepackage{mathpazo} % palatino math fonts
+%\usepackage{palatino}
+%\usepackage{utopia}
+\usepackage{latexsym}
+\usepackage{verbatim}
+\usepackage{graphics}
+
+\usepackage{CJKutf8}
+
+\usepackage[hyperindex]{hyperref}
+\usepackage{url}
+\urlstyle{sf}
+
+\newcommand{\marginquote}[2]{\marginpar[\footnotesize \raggedleft {\em #1} \\ 
+                                        \scriptsize #2]
+                            {\footnotesize \raggedright {\em #1} \\ \scriptsize #2}}
+\newcommand{\sidequote}{\marginquote}
+\newcommand{\shortsection}[1]{\textbf{#1. }}
+
+\newenvironment{enumtight}{\vspace*{-2ex}\begin{enumerate}\setlength{\itemsep}{0cm} \setlength{\parskip}{0cm}\setlength{\parskip}{0cm}\setlength{\parsep}{3pt}\setlength{\topsep}{3pt}\setlength{\partopsep}{0pt}}{\end{enumerate}\vspace*{-1.3ex}}
+\newenvironment{itemtight}{\vspace*{-2ex}\begin{itemize}\setlength{\itemsep}{0cm} \setlength{\parskip}{0cm}\setlength{\parsep}{3pt} \setlength{\topsep}{3pt}\setlength{\partopsep}{0pt}}{\end{itemize}\vspace*{-1.3ex}}
+
+\newenvironment{smallquote}{\vspace*{-2ex}\begin{list}{}{%
+  \setlength\rightmargin{1.5em}\setlength\leftmargin{1.5em}\setlength\labelwidth{0pt}\setlength\itemindent{0pt}}\item[]}{\end{list}\vspace*{-1.3ex}}
+\newcommand{\nonterminal}[1]{{\sl #1}}
+\newcommand{\terminal}[1] {{\textbf{#1}}}
+\newcommand{\produces}{$\rightarrow$}
+\newenvironment{bnfgrammar}{\begin{quote}\begin{tabbing} \hspace*{3em}\=\ \produces\quad\= \kill}{\end{tabbing}\end{quote}}
+\newenvironment{bnfgrammarm}[1]{\begin{quote}\begin{tabbing} #1\qquad\=\ \produces\quad\= \kill}{\end{tabbing}\end{quote}}
+\newenvironment{smallbnfgrammar}{\begin{quote}\begin{tabbing} \hspace*{3em}\=\ \produces\quad\= \kill}{\end{tabbing}\end{quote}}
+\newcommand{\bnfrule}[2]{\hfill\nonterminal{#1}\>\produces\>#2\\}
+
+\newcounter{problemno}
+\newcommand{\problem}[1]{
+   \stepcounter{problemno}
+	 {\bf Problem \theproblemno: #1}}
+	 
+\newcommand{\handout}[3]{
+   \renewcommand{\thepage}{#1-\arabic{page}}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{
+    \hbox to 5.78in { {\bf National Sun Yat-sen University - CSE110: Discrete  Mathematics} \hfill }
+       \vspace{4mm}
+       \hbox to 5.78in { {\Large \hfill #2  \hfill} }
+       \vspace{-5mm}
+       \hbox to 5.78in { { \hfill {\bf #3}} }
+      }
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+
+
+\newcommand{\fillin}[1]{\vspace*{#1}}
+
+%   % \begin{center}
+%   \ \\ \framebox{
+%      \vbox{
+%    \hbox to 6.0in {\vspace{#1}}}
+%    }
+%   %\end{center}
+%}
+
+\newcommand{\fillinshort}[1]{
+   \framebox{
+      \vbox{
+    \hbox to #1 {\vspace{4mm}}}}
+}
+
+\newcommand{\fillinline}[1]{
+   \framebox{
+      \vbox{
+    \hbox to #1 {\vspace{8mm}}}}
+}
+
+\renewcommand\theenumi{\alph{enumi}}
+\newcommand{\answer}[1]{\par \bigskip \begin{smallquote}\emph{Answer:} #1\end{smallquote}}
+
+\begin{document}
+\begin{CJK*}{UTF8}{bsmi}
+\handout{}{Midterm Exam}{17 October 2025 (10:30)}
+
+Teacher: HSU, RUEI-HAU （徐瑞壕）\\
+{\bf Honor Policy.}  For this exam, you must {\bf work alone}.  You may not aid or accept aid from other students.  
+
+{\bf Exam Time:} 10:30 - 12:00
+
+{\bf Directions.} The references of the textbooks and slides of the courses are allowed. Please DO NOT use computer, laptop, and smartphone to search the answers of the questions ONLINE. THUS, finding solution ONLINE is FORBIDDEN. Please keep your computing devices, including the aforementioned devices OFFLINE.
+
+{\large {\bf 學號: }} \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\large {\bf 姓名: }} {} 
+\\\\\\\\\\
+(The points of each problem is specified in each problem and 125 points in total.)\\\\\\
+% p9 Question 3 改
+\problem{(10 points.) Buick automobiles come in four models, 11 colors, four engine sizes, and two transmission types. (a) How many distinct Buicks can be manufactured? (b) If one of the available colors is blue, how many different blue Buicks can be manufactured?\\}
+
+% p11 Question 20
+\problem{(10 points.) Over the Internet, data are transmitted in structured blocks of bits called datagrams. a) In how many ways can the letters in DATAGRAM be arranged? b) For the arrangements of part (a), how many have all three A’s together?
+\\}
+
+%p12 Question 34 
+\problem{(10 points.) How many distinct four-digit integers can one make from
+the digits 1, 3, 3, 7, 7, and 8?
+\\}
+\\\\\\
+%p12 Question 29 改
+\problem{(10 points.) a) Determine the value of the integer variable \textit{counter} after execution of the following program segment. (Here $i$, $j$, and $k$ are integer variables.)\\
+$counter$:=0\\
+\textbf{for} $i:=1$ \textbf{to} $12$ \textbf{do} \\
+\ \ \ \ \\
+\textbf{for} $j:=6$ \textbf{to} $15$ \textbf{do}\\
+\ \ \ \ \\
+\textbf{for} $k:=18$ \textbf{down to} $9$ \textbf{do}\\
+\ \ \ \   $print (i - j)*k$\\
+}
+\\\\\\
+%p23 Question 26
+\problem{(10 points for each sub-problem.)Find the coefficient of $w^2x^2y^2z^2$ in the expansion of\\\\
+(a) $(w + x + y + z + 1)^{10}$ \\\\
+(b) $(2w - x + 3y + z - 2)^{12}$ 
+}
+\\\\\\
+%\problem{(10 points for each sub-problem.)Express each of the following using the summation (or Sigma) notation. In parts (b), $n$ denotes a positive integer.\\
+%\begin{enumerate}
+%	\item $\frac{1}{2!}+\frac{1}{3!}+\frac{1}{4!}+\cdots+\frac{1}{n!},n\geq{}2$
+%	\item $n-{n+1\choose2!} +{n+2\choose4!}-{n+3\choose6!}+\cdots{}+(-1)^n{2n\choose(2n)!}$
+%\end{enumerate}}
+%p32 Question 7 改
+\problem{(15 points and 5 points for each sub-problem.)Determine the number of integer solutions of $x_1 + x_2 + x_3 + x_4 = 36$,
+where\\\\
+a)$x_i \ge 0$,$1\le i\le4$\\\\
+b)$x_i \ge 8,1\le i\le 4$\\\\
+c)$x_1,x_2,x_3>0,0<x_4<28$\\\\
+}
+\\\\\\
+\problem{(10 points and 5 points for each sub-problem.)
+If $A=\{1, 2, 3\}$, and $B=\{2, 4, 5\}$, give examples of
+(a) three nonempty relations from $A$ to $B$; (b) three nonempty
+relations on $A$.}
+\\\\\\
+\problem{(10 points.) If there are 2187 functions $f: A\rightarrow B$ and $|B|=3$, what is $|A|$?}
+\\\\\\
+\problem{(10 points.) Let $f : A\rightarrow B$, where $A=X \cup Y$ with $X\cap Y =  \emptyset$. If $f|_x$
+and $f|_Y$ are one-to-one, does it follow that $f$ is one-to-one?}
+\\\\\\
+\problem{(10 points.)A chemist who has five assistants is engaged in a research project that calls for nine compounds that must be synthesized.
+In how many ways can the chemist assign these syntheses to the five assistants so that each is working on at least one synthesis?}
+\\\\\\
+\problem{(20 points and 10 points for each sub-problem.) a) How many two-factor unordered factorizations, where each factor is greater than 1, are there for 156,009?
+b) In how many ways can 156,009 be factored into two
+or more factors, each greater than 1, with no regard to the
+order of the factors?
+c) Let $p_1, p_2, p_3, . . . , p_n$ be $n$ distinct primes. In how
+many ways can one factor the product $\prod_{i=1}^{n}p_{i}$ into two or more factors, each greater than 1, where the order of the factors is not relevant?}
+\end{CJK*}
+\end{document}
+
+
