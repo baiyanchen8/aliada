@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # 資料夾路徑
-base_dir = os.path.expanduser("~/桌面/雞湯文學")
+base_dir = os.path.expanduser("C:\Users\baiya\Documents\GITHUB\aliada//雞湯文學")
 categories = {
     "雞湯": "positive",
     "毒雞湯": "negative"
